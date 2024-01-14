@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RachardianCodes - Portofolio</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css"> <!-- Ganti dengan jalur yang sesuai -->
+  <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script> <!-- Ganti dengan jalur yang sesuai -->
+  <script src="https://kit.fontawesome.com/36af2276c3.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+
+  <style>
+    body {
+      padding-top: 56px; /* Tinggi navbar untuk menghindari tumpang tindih konten */
+    }
+    
+
+    .navbar {
+      background-color: #34CD30; /* Warna navbar yang baru */
+      color: #FFFFFF; /* Warna font sesuai kebutuhan */
+      font-family: 'Arial', sans-serif; /* Font elegan sesuai kebutuhan */
+    }
+
+    .navbar-brand {
+      font-size: 1.5em; /* Ukuran font brand */
+      font-weight: bold;
+    }
+
+    .jumbotron {
+      background-color: #f8f9fa; /* Warna latar belakang jumbotron */
+      text-align: center; /* Pusatkan teks dalam jumbotron */
+      padding: 50px 0; /* Penyesuaian jarak atas dan bawah */
+    }
+
+    .display-3 {
+      font-size: 2.5em; /* Ukuran font Hello everyone */
+      color: #34CD30; /* Warna font Hello everyone */
+    }
+
+    .display-1 {
+      font-size: 2em; /* Decrease the font size for Rachardian Bagaskoro */
+      font-weight: bold; /* Keep the bold style */
+    }
+
+    .display-2 {
+      font-size: 1.2em; /* Decrease the font size for Student & Junior Programmer */
+      /* font-weight: bold; Keep the bold style */
+}
+
+
+    .display-4 {
+      color: #34CD30; /* Warna font smiley face */
+    }
+
+    .btn-contact {
+      background-color: #34CD30; /* Warna tombol disesuaikan dengan warna navbar */
+      border-color: #34CD30;
+    }
+
+    .btn-contact:hover {
+      background-color: #2EAC27; /* Warna tombol saat dihover disesuaikan dengan warna navbar yang lebih gelap */
+      border-color: #2EAC27;
+    }
+
+    /* ... */
+
+    /* About Me Section */
+    #about-me {
+      background-color: #f8f9fa;
+      padding: 5em 0;
+      border-radius: 15px; /* Tambahkan border-radius */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Tambahkan box-shadow */
+    }
+
+    #about-me h2 {
+      color: #34CD30;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #about-me p {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Contact Me Section */
+    #contact-me {
+      background-color: #f8f9fa;
+      padding: 5em 0;
+      border-radius: 15px; /* Tambahkan border-radius */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Tambahkan box-shadow */
+    }
+
+    #contact-me h2 {
+      color: #34CD30;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      margin-right: 1em;
+    }
+
+    .social-icons i {
+      color: #34CD30;
+      font-size: 3em;
+    }
+
+    /* My Portfolio Section */
+    #my-portfolio {
+      background-color: #f8f9fa;
+      padding: 5em 0;
+      border-radius: 15px; /* Tambahkan border-radius */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Tambahkan box-shadow */
+    }
+
+    #my-portfolio h2 {
+      color: #34CD30;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .portfolio-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 2em;
+    }
+
+    .portfolio-box {
+      width: 100%;
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 1em;
+      margin-bottom: 1em;
+      border-radius: 10px; /* Tambahkan border-radius */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tambahkan box-shadow */
+    }
+
+    .portfolio-image {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .portfolio-title {
+      width: 100%;
+      margin-top: 1em;
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #34CD30;
+      padding-top: 5px;
+    }
+    
+    /* My Blog Section */
+    #my-blog {
+      background-color: #f8f9fa;
+      padding: 5em 0;
+      border-radius: 15px; /* Tambahkan border-radius */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Tambahkan box-shadow */
+    }
+
+    #my-blog h2 {
+      color: #34CD30;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .blog-post {
+      width: 100%;
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 1em;
+      margin-bottom: 1em;
+      border-radius: 10px; /* Tambahkan border-radius */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tambahkan box-shadow */
+    }
+
+    .blog-image {
+      width: 60%;
+      margin: 0 auto;
+      
+    }
+
+    .blog-title {
+      width: 100%;
+      margin-top: 1em;
+      font-weight: bold;
+      font-size: 1em;
+      color: #34CD30;
+    }
+
+    .blog-description {
+      padding-top: 5px;
+      font-size: 1em;
+    }
+
+   
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #34CD30;">
+  <div class="container">
+    <a class="navbar-brand" href="#">RachardianCodes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#beranda">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about-me">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact-me">Contact Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#my-portfolio">My Portofolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#my-blog">My Achievement</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Clients</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Jumbotron - Pengenalan Diri -->
+  <section id="beranda">
+    <div class="jumbotron d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="IMG_20231207_144646.jpg" alt="RachardianCodes" class="img-fluid rounded-circle" style="width: 200px; height: 200px;">
+          </div>
+          <div class="col-md-6">
+            <h1 class="display-3"><b></b></h1>
+            <p class="lead"><span class="display-1">Rachardian Bagaskoro</span>,</p>
+            <p class="lead"><span class="display-2">Student & Junior Programmer</span>.</p>
+            <p class="lead"></p>
+
+            <a href="#contact-me" class="btn btn-contact btn-lg">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about-me">
+    <div class="container">
+      <h2>About Me</h2>
+      <p style="text-align: justify;">
+        My name is Rachardian Bagaskoro, and I am a graduate of Texar Karawang Vocational High School in 2024. During my time as a student, I also worked part-time as a practical work report assistant, PowerPoint designer, and junior programmer. I participated in the IT Software Solution for Business competition and won the first place in 2023 and second place in 2022. I also have an interest in the Japanese language, so I have been studying it and took the JLPT <i>(Japanese-Language Proficiency Test)</i> N5 level, and I passed with a good score.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section id="contact-me" class="bg-light p-5 mb-5 rounded shadow text-center">
+    <div class="container">
+      <h2 style="color: #34CD30; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Contact Me</h2>
+      
+      <div class="social-icons mt-4">
+        <a href="https://www.instagram.com/rachardiannet304/" class="text-decoration-none me-3 text-dark">
+          <i class="fab fa-instagram fa-3x" style="color: #34CD30;"></i>
+        </a>
+        <a href="https://github.com/RachardianCodes" class="text-decoration-none me-3 text-dark">
+          <i class="fab fa-linkedin fa-3x" style="color: #34CD30;"></i>
+        </a>
+        <a href="https://www.youtube.com/@rachardianbagaskoro4878" class="text-decoration-none me-3 text-dark">
+          <i class="fab fa-youtube fa-3x" style="color: #34CD30;"></i>
+        </a>
+        <a href="https://mail.google.com/rdncodenet304@gmail.com" class="text-decoration-none me-3 text-dark">
+          <i class="fas fa-envelope fa-3x" style="color: #34CD30;"></i>
+        </a>
+        <a href="https://github.com/RachardianCodes" class="text-decoration-none text-dark">
+          <i class="fab fa-github fa-3x" style="color: #34CD30;"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Portfolio Section -->
+<!-- My Portfolio Section -->
+<section id="my-portfolio">
+  <div class="container text-center">
+    <h2>My Portofolio</h2>
+    
+      <div class="portfolio-box">
+        <div class="portfolio-image">
+          <a href="librarytexar.html">
+            <div class="portfolio-image">
+              <!-- Ganti dengan elemen video -->
+              <img src="portofolio1/2.jpg" alt="Portfolio Library Application of SMKS Texar Karawang" class="portfolio-image" style="border-radius: 10px;">
+            
+            </div>
+            </a>
+        </div>
+        <div class="portfolio-title">
+          Library Application Of SMKS Texar Karawang
+        </div>
+        <a href="librarytexar.html" style=" padding-top: 1em; color: #34CD30;">Klik here for detail</a>
+
+      </div>
+
+      <div class="portfolio-box">
+        <a href="texasvoice.html">
+        <div class="portfolio-image">
+          <!-- Ganti dengan elemen video -->
+          <img src="potofolio2/Screenshot 2024-01-14 194739.png" alt="Portfolio TexasVoice" class="portfolio-image" style="border-radius: 10px;">
+        
+        </div>
+        </a>
+        <div class="portfolio-title">
+          TexasVoice Web Application
+        </div>
+        <a href="texasvoice.html" style=" padding-top: 1em; color: #34CD30;">Klik here for detail</a>
+
+      </div>
+
+      <!-- Add more portfolio items as needed -->
+
+    
+  </div>
+</section>
+
+<!-- Blog Section -->
+<section id="my-blog">
+  <div class="container text-center">
+    <h2>My Achievement</h2>
+
+    <div class="blog-post">
+      <h3 class="blog-title">Juara 2 Lomba LKS Tingkat Kabupaten Karawang Tahun 2022</h3>
+      <div class="blog-image">
+        <!-- Ganti dengan elemen gambar untuk blog -->
+        <img src="Blog/WhatsApp Image 2024-01-09 at 09.38.22.jpeg" alt="Blog Image 1" class="img-fluid" style="border-radius: 20px; padding-top: 15px;">
+      </div>
+      <div class="blog-description" style="padding-top: 15px;">
+        
+      </div>
+    </div>
+
+    <div class="blog-post">
+      <h3 class="blog-title">Juara 1 Lomba LKS Tingkat Kabupaten Karawang Tahun 2023</h3>
+      <div class="blog-image">
+        <!-- Ganti dengan elemen gambar untuk blog -->
+        <img src="Blog/WhatsApp Image 2024-01-09 at 09.38.27.jpeg" alt="Blog Image 1" class="img-fluid" style="border-radius: 20px; padding-top: 15px;">
+      </div>
+      <div class="blog-description" style="padding-top: 15px;">
+        
+      </div>
+    </div>
+
+    
+
+    <!-- Add more blog posts as needed -->
+
+    <div class="blog-post">
+      <h3 class="blog-title">Peserta Lomba LKS Tingkat Provinsi 2023</h3>
+      <div class="blog-image">
+        <!-- Ganti dengan elemen gambar untuk blog -->
+        <img src="Blog/1.jpeg" alt="Blog Image 1" class="img-fluid" style="border-radius: 20px; padding-top: 15px;">
+      </div>
+      <div class="blog-description" style="padding-top: 15px;">
+        
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="navbar text-light text-center p-3">
+  <p class="m-0 navbar-text mx-auto" style="color: #FFFFFF;">
+    Copyright © 2024 Rachardian Bagaskoro All rights reserved.
+  </p>
+</footer>
+
+</body>
+</html>
