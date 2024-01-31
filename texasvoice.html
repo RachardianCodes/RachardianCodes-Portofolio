@@ -35,7 +35,7 @@
       margin-bottom: 20px; */
 
       background-color: #f8f9fa;
-      padding: 3em 0;
+      padding: 2em 2em;
       border-radius: 15px; /* Tambahkan border-radius */
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Tambahkan box-shadow */
 
@@ -79,7 +79,16 @@
   z-index: 1; /* Memastikan teks berada di atas gambar */
 }
 
+    .animated-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
 
+    .animated-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
    
   </style>
@@ -121,11 +130,11 @@
 
 <!-- Portfolio Section -->
 <section id="portfolio">
-    <img id="portfolio-image" src="TexasVoice (2).png" alt="SMK Texar Image">
+    <img id="portfolio-image" src="TexasVoice (2).png" alt="SMK Texar Image" class="animated-section">
     <!-- <div id="portfolio-title">TexasVoice</div> -->
   
     <!-- First Portfolio Item -->
-    <div class="container portfolio-item">
+    <div class="container portfolio-item animated-section">
       <div class="row">
         <div class="col-md-6">
           <img src="potofolio2/Screenshot 2024-01-14 214509.png" alt="Photo 1" style="border-radius: 20px;">
@@ -138,7 +147,7 @@
     </div>
   
     <!-- Second Portfolio Item -->
-    <div class="container portfolio-item">
+    <div class="container portfolio-item animated-section">
       <div class="row">
         <div class="col-md-6 order-md-2">
           <img src="potofolio2/Screenshot 2024-01-15 103649.png" alt="Photo 2" style="border-radius: 20px;">
@@ -154,7 +163,7 @@
     </div>
   
     <!-- Third Portfolio Item -->
-    <div class="container portfolio-item">
+    <div class="container portfolio-item animated-section">
       <div class="row">
         <div class="col-md-6">
           <img src="potofolio2/Screenshot 2024-01-14 194739.png" alt="Photo 1" style="border-radius: 20px;">
@@ -170,7 +179,7 @@
     </div>
 
     <!-- Fourth Portfolio Item (No Image) -->
-<div class="container portfolio-item">
+<div class="container portfolio-item animated-section">
   <div class="row">
     <div class="col-md-12 text-center portfolio-text">
       <h3 style="text-align: center;">Challenges & Sollutions</h3>
@@ -186,7 +195,7 @@
 </div>
 
 <!-- Review Video Portfolio Item -->
-<div class="container portfolio-item">
+<div class="container portfolio-item animated-section">
   <div class="col-md-12 portfolio-text">
     <h3 style="text-align: center;">Review Video</h3>
     <!-- Ganti sumber video (src) dan jenis MIME (type) sesuai dengan video Anda -->
@@ -205,11 +214,32 @@
 
 
 <!-- Footer Section -->
-<footer class="navbar text-light text-center p-3">
+<footer class="navbar text-light text-center p-3 animated-section">
   <p class="m-0 navbar-text mx-auto" style="color: #FFFFFF;">
     Copyright © 2024 Rachardian Bagaskoro All rights reserved.
   </p>
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const animatedSections = document.querySelectorAll('.animated-section');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  animatedSections.forEach(section => {
+    observer.observe(section);
+  });
+});
+
+</script>
 
 </body>
 </html>

@@ -126,6 +126,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       margin-top: 2em;
+      padding: 2em 3em;
     }
 
     .portfolio-box {
@@ -141,6 +142,8 @@
     .portfolio-image {
       width: 100%;
       margin: 0 auto;
+      padding: 0em 1em;
+      
     }
 
     .portfolio-title {
@@ -194,6 +197,18 @@
       font-size: 1em;
     }
 
+    .animated-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .animated-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
    
   </style>
 </head>
@@ -234,7 +249,7 @@
 
 
   <!-- Jumbotron - Pengenalan Diri -->
-  <section id="beranda">
+  <section id="beranda" class="animated-section">
     <div class="jumbotron d-flex align-items-center">
       <div class="container">
         <div class="row">
@@ -255,7 +270,7 @@
   </section>
 
   <!-- About Me Section -->
-  <section id="about-me">
+  <section id="about-me" class="animated-section">
     <div class="container">
       <h2>About Me</h2>
       <p style="text-align: justify;">
@@ -265,7 +280,7 @@
   </section>
 
   <!-- Contact Me Section -->
-  <section id="contact-me" class="bg-light p-5 mb-5 rounded shadow text-center">
+  <section id="contact-me" class="bg-light p-5 mb-5 rounded shadow text-center animated-section">
     <div class="container">
       <h2 style="color: #34CD30; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Contact Me</h2>
       
@@ -293,9 +308,9 @@
 <!-- My Portfolio Section -->
 <section id="my-portfolio">
   <div class="container text-center">
-    <h2>My Portofolio</h2>
+    <h2 class="animated-section">My Portofolio</h2>
     
-      <div class="portfolio-box">
+      <div class="portfolio-box animated-section">
         <div class="portfolio-image">
           <a href="librarytexas.html">
             <div class="portfolio-image">
@@ -312,7 +327,7 @@
 
       </div>
 
-      <div class="portfolio-box">
+      <div class="portfolio-box animated-section">
         <a href="texasvoice.html">
         <div class="portfolio-image">
           <!-- Ganti dengan elemen video -->
@@ -336,19 +351,22 @@
 <!-- Blog Section -->
 <section id="my-blog">
   <div class="container text-center">
-    <h2>My Achievement</h2>
+    <h2 class="animated-section">My Achievement</h2>
 
-    <div class="blog-post">
+    <div class="blog-post animated-section">
       <h3 class="blog-title">Juara 2 Lomba LKS Tingkat Kabupaten Karawang Tahun 2022</h3>
       <div class="blog-image">
+        <a href="juara2lks.html">
         <!-- Ganti dengan elemen gambar untuk blog -->
         <img src="Blog/WhatsApp Image 2024-01-09 at 09.38.22.jpeg" alt="Blog Image 1" class="img-fluid" style="border-radius: 20px; padding-top: 15px;">
+      </a>
       </div>
       <div class="blog-description" style="padding-top: 15px;">
+        <a href="juara2lks.html" style="color: #34CD30;">Click here for detail</a>
       </div>
     </div>
 
-    <div class="blog-post">
+    <div class="blog-post animated-section">
       <h3 class="blog-title">Juara 1 Lomba LKS Tingkat Kabupaten Karawang Tahun 2023</h3>
       <div class="blog-image">
         <!-- Ganti dengan elemen gambar untuk blog -->
@@ -363,7 +381,7 @@
 
     <!-- Add more blog posts as needed -->
 
-    <div class="blog-post">
+    <div class="blog-post animated-section">
       <h3 class="blog-title">Peserta Lomba LKS Tingkat Provinsi 2023</h3>
       <div class="blog-image">
         <!-- Ganti dengan elemen gambar untuk blog -->
@@ -379,11 +397,32 @@
 
 
 <!-- Footer Section -->
-<footer class="navbar text-light text-center p-3">
+<footer class="navbar text-light text-center p-3 animated-section">
   <p class="m-0 navbar-text mx-auto" style="color: #FFFFFF;">
     Copyright © 2024 Rachardian Bagaskoro All rights reserved.
   </p>
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const animatedSections = document.querySelectorAll('.animated-section');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  animatedSections.forEach(section => {
+    observer.observe(section);
+  });
+});
+
+</script>
 
 </body>
 </html>
