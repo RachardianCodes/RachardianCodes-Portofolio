@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>RachardianCodes - Texas Library Application</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css"> <!-- Ganti dengan jalur yang sesuai -->
+  <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script> <!-- Ganti dengan jalur yang sesuai -->
+  <script src="https://kit.fontawesome.com/36af2276c3.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+
+  <style>
+    body {
+      padding-top: 56px; /* Tinggi navbar untuk menghindari tumpang tindih konten */
+    }
+    
+
+    .navbar {
+      background-color: #34CD30; /* Warna navbar yang baru */
+      color: #FFFFFF; /* Warna font sesuai kebutuhan */
+      font-family: 'Arial', sans-serif; /* Font elegan sesuai kebutuhan */
+    }
+
+    .navbar-brand {
+      font-size: 1.5em; /* Ukuran font brand */
+      font-weight: bold;
+    }
+    .portfolio-item {
+      /* background-color: #34CD30;
+      color: #FFFFFF;
+      
+      padding: 20px;
+      margin-bottom: 20px; */
+
+      background-color: #f8f9fa;
+      padding: 2em 2em;
+      border-radius: 15px; /* Tambahkan border-radius */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Tambahkan box-shadow */
+
+    }
+
+    .portfolio-item img {
+      width: 100%;
+    /* padding-left: 10px; */
+      height: auto;
+      /* border-radius: 10px; */
+    }
+
+    .portfolio-text {
+      padding: 20px;
+      text-align: justify;
+    }
+
+    /* Portfolio Section */
+#portfolio {
+  position: relative;
+  overflow: hidden;
+  
+}
+
+#portfolio-image {
+    width: 100%;
+      height: 30vh; /* Set the height to 40% of the viewport height */
+      object-fit: cover; /* Preserve aspect ratio and cover the entire container */
+      opacity: 0.9;
+      padding-bottom: 20px;
+      color: black;
+}
+
+#portfolio-title {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: black;
+  text-align: center;
+  z-index: 1; /* Memastikan teks berada di atas gambar */
+}
+
+    .animated-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .animated-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+
+   
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #34CD30;">
+  <div class="container">
+    <a class="navbar-brand" href="#">RachardianCodes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html#beranda">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#about-me">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#contact-me">Contact Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#my-portfolio">My Portofolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#my-blog">My Achievement</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Clients</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Portfolio Section -->
+<section id="portfolio">
+    <img id="portfolio-image" src="Teks paragraf Anda.png" alt="Kasir Access" class="animated-section">
+    <!-- <div id="portfolio-title">TexasVoice</div> -->
+  
+    <!-- First Portfolio Item -->
+    <div class="container portfolio-item animated-section">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="kasiraccess/Screenshot 2024-03-24 104821.png" alt="Photo 1" style="border-radius: 20px;">
+        </div>
+        <div class="col-md-6 portfolio-text">
+          <h3>Kasir Access</h3>
+          <p>Kasir Access is a comprehensive sales and product management application designed for minimarkets and supermarkets. It offers features such as transaction management, inventory tracking, sales reports generation, user and product data management, and printing capabilities for receipts and reports. Built with user-friendly interfaces, Kasir Access streamlines the process of managing sales and products, enhancing efficiency for businesses in the retail sector.</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Second Portfolio Item -->
+    <div class="container portfolio-item animated-section">
+      <div class="row">
+        <div class="col-md-6 order-md-2">
+          <img src="kasiraccess/Screenshot 2024-03-24 104914.png" alt="Photo 2" style="border-radius: 20px;">
+        </div>
+        <div class="col-md-6 order-md-1 portfolio-text">
+          <h3>Key Features:</h3>
+          <h6>Admin Panel:</h6>
+          <li>Manage User Data: Admin can manage user data. Including regristration, deletion, update, search user data.</li>
+          <li>Manage Product Data: Admin can manage product data. Including add, update, upload, delete, search of product data.</li>
+          <li>Manage Report: Admin can search, print log data transaction for documentation.</li>
+          <li>Transaction Panel: Admin can add and print struct transaction.</li>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Third Portfolio Item -->
+    <div class="container portfolio-item animated-section">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="kasiraccess/Screenshot 2024-03-24 105006.png" alt="Photo 1" style="border-radius: 20px;">
+        </div>
+        <div class="col-md-6 portfolio-text">
+          <h3>Key Features :</h3>
+          <h6>Owner Panel:</h6>
+          <li>Manage Report: Owner can search, print log data transaction for documentation.</li>
+          <li>Transaction Panel: Owner can add and print struct transaction.</li>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container portfolio-item animated-section">
+      <div class="row">
+        <div class="col-md-6 order-md-2">
+          <img src="kasiraccess/Screenshot 2024-03-24 105025.png" alt="Photo 1" style="border-radius: 20px;">
+        </div>
+        <div class="col-md-6 order-md-1 portfolio-text">
+          <h3>Key Features :</h3>
+          <h6>Cashier Panel:</h6>
+          <!-- <li>Manage Report: Owner can search, print log data transaction for documentation.</li> -->
+          <li>Transaction Panel: Cashier can add and print struct transaction.</li>
+
+        </div>
+      </div>
+    </div>
+
+
+<!-- Review Video Portfolio Item -->
+<div class="container portfolio-item animated-section">
+  <div class="col-md-12 portfolio-text">
+    <h3 style="text-align: center;">Review Video</h3>
+    <!-- Ganti sumber video (src) dan jenis MIME (type) sesuai dengan video Anda -->
+    <!-- <video width="100%" height="315" controls style="border-radius: 20px; padding-top: 1em;"> -->
+      <!-- <source src="portofolio1/10.mp4" type="video/mp4"> -->
+        <iframe width="100%" height="300px" style="border-radius: 20px; padding-top: 1em;" src="https://www.youtube.com/embed/IKdOD9elL8o?si=CRcZi5oeOeH4bgeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <!-- Your browser does not support the video tag. -->
+    <!-- </video> -->
+
+    <!-- <h5 style="padding-top: 1em;">Outcome :</h5>
+    <p>Texas Library has been successfully implemented and used for manage library at SMKS Texar Karawang. The application facilitates admin in managing books, users, borrow, and book return. Also workers in managing borrow and book return</p>
+  </div> -->
+</div>
+</div>
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="navbar text-light text-center p-3 animated-section">
+  <p class="m-0 navbar-text mx-auto" style="color: #FFFFFF;">
+    Copyright © 2024 Rachardian Bagaskoro All rights reserved.
+  </p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const animatedSections = document.querySelectorAll('.animated-section');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  animatedSections.forEach(section => {
+    observer.observe(section);
+  });
+});
+
+</script>
+
+</body>
+</html>
